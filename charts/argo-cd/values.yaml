@@ -2,6 +2,8 @@ argo-cd:
   dex:
     enabled: false
   server:
+    spec:
+      namespace: argo-cd
     extraArgs:
       - --insecure
     config:

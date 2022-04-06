@@ -6,8 +6,8 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    server: https://kubernetes.default.svc
-    namespace: default
+    server: https://kubernetes.default.svc   #gke cluster api ip
+    namespace: argocd 
   project: default
   source:
     path: apps/

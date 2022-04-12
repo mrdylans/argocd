@@ -11,11 +11,6 @@ spec:
     path: charts/demo-app/hello/stg
     repoURL: git@github.com:mrdylans/argocd.git
     targetRevision: HEAD
-    plugin:
-      name: argocd-vault-helm3
-      env:
-        - name: HELM_ARGS
-          value: '-f values-stg.yaml'
   project: default
   syncPolicy:
     automated:

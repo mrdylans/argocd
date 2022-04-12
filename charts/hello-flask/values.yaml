@@ -1,5 +1,0 @@
-namespace: hello-flask 
-
-hello-flask:
-  imageRegistry: "hello-flask_test-service"
-  

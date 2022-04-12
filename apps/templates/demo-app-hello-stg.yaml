@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello 
+  namespace: demo-app-stg
+spec:
+  destination:
+    namespace: demo-app-stg
+    server: ''
+  source:
+    path: charts/demo-app/hello
+    repoURL: git@github.com:mrdylans/argocd.git
+    targetRevision: HEAD
+    plugin:
+      name: argocd-vault-helm3
+      env:
+        - name: HELM_ARGS
+          value: '-f values-stg.yaml'
+  project: default
+  syncPolicy:
+    automated:
+      automated:
+        prune: false
+        selfHeal: true
+      selfHeal: true

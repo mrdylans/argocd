@@ -1,0 +1,4 @@
+namespace: demo-app-prod
+
+someservice:
+  someimage: hello-flask_test-service:latest

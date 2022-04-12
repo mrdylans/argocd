@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: demo-app-stg
-    server: ''
+    server: https://kubernetes.default.svc
   source:
     path: charts/demo-app/hello/stg
     repoURL: git@github.com:mrdylans/argocd.git

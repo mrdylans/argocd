@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello 
+  name: hello-stg
   namespace: demo-app-stg
 spec:
   destination:
     namespace: demo-app-stg
     server: ''
   source:
-    path: charts/demo-app/hello
+    path: charts/demo-app/hello/stg
     repoURL: git@github.com:mrdylans/argocd.git
     targetRevision: HEAD
     plugin:

@@ -1,4 +1,4 @@
 namespace: demo-app-stg
 
-hello:
+hello-stg:
   image: localhost:5000/hello-flask_test-service:latest

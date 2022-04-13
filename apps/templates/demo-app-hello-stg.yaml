@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-app-hello
+  namespace: demo-app-hello
+spec:
+  destination:
+    namespace: demo-app-hello
+    server: https://kubernetes.default.svc 
+  source:
+    path: demo-app/stg/hello
+    repoURL: git@github.com:mrdylans/argocd.git
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: true 
+      selfHeal: true

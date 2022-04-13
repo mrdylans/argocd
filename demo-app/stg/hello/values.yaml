@@ -1,0 +1,4 @@
+namespace: demo-app-hello
+
+hello:
+  helloimage: localhost:5000/hello-flask_test-service:latest

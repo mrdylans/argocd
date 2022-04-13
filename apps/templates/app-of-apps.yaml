@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps
+  name: app-of-apps
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    server: https://kubernetes.default.svc   #gke cluster api ip, context needs to be added https://argo-cd.readthedocs.io/en/stable/getting_started/
+    server: https://kubernetes.default.svc
     namespace: argo-cd
   project: default
   source:

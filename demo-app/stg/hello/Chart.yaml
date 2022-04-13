@@ -1,5 +1,5 @@
 apiVersion: v2
-name: hello
+name: demo-app-hello
 description: A Helm chart for k8s
 
 type: application

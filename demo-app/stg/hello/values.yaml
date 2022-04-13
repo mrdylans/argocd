@@ -1,5 +1,5 @@
 namespace: demo-app-hello
 
 hello:
-  image: localhost:5000/hello-flask_test-service:latest
+  appimage: localhost:5000/hello-flask_test-service:latest
   replicaCount: 1

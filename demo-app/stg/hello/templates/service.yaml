@@ -7,4 +7,8 @@ metadata:
   name: demo-app-hello
 spec:
   ports:
-  - port: 8000
+    - protocol: TCP
+      port: 8000
+      targetPort: 8080
+  selector:
+    service: demo-app-hello

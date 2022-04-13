@@ -16,6 +16,6 @@ spec:
         app: demo-app-hello
     spec:
       containers:
-        - image: {{ .Values.hello.image }}
+        - image: {{ .Values.hello.appimage }}
           name: demo-app-hello
           resources: {}

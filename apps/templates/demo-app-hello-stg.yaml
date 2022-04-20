@@ -3,15 +3,18 @@ kind: Application
 metadata:
   name: demo-app-hello
   namespace: demo-app-hello
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: demo-app-hello
     server: https://kubernetes.default.svc 
+    namespace: demo-app-hello
+  project: default
   source:
-    path: demo-app/stg/hello
+    chart: hello
+    path: demo-app/stg
     repoURL: git@github.com:mrdylans/argocd.git
     targetRevision: HEAD
-  project: default
   syncPolicy:
     automated:
       prune: true 

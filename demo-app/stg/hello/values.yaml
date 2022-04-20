@@ -1,5 +1,0 @@
-namespace: demo-app-hello
-
-hello:
-  appimage: gcr.io/adara-qa-auto/hello-flask_test-service:latest
-  replicaCount: 1

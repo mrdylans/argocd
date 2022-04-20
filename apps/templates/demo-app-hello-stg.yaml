@@ -13,7 +13,7 @@ spec:
   source:
     chart: hello
     path: demo-app/stg
-    repoURL: https://git@github.com:mrdylans/argocd.git
+    repoURL: https://github.com:mrdylans/argocd
     targetRevision: HEAD
   syncPolicy:
     automated:
